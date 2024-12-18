@@ -3,11 +3,14 @@ package com.example.quizApp.entity;
 
 import jakarta.persistence.*;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 @Entity
 public class QuizSession {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "quiz_session_seq")
+    @SequenceGenerator(name = "quiz_session_seq", sequenceName = "quiz_session_seq", initialValue = 1000001, allocationSize = 1)
     private Long id;
 
     @ManyToOne
@@ -16,6 +19,7 @@ public class QuizSession {
     private int questionsAnswered;
     private int correctAnswers;
     private int incorrectAnswers;
+
 
 
     @Override
