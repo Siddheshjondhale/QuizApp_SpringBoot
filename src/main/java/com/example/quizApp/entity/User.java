@@ -3,7 +3,7 @@ package com.example.quizApp.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "app_user")  // Renamed table to app_user
+@Table(name = "Users")  // Renamed table to app_user
 public class User {
 
     @Id

@@ -7,6 +7,21 @@ public class AnswerSubmitDTO {
     private Long questionId;
     private String answer;
 
+
+    private Long userId;
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+
+
+
+
+
     public Long getQuizSessionId() {
         return quizSessionId;
     }

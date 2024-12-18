@@ -17,6 +17,7 @@ public class QuizSession {
     private int correctAnswers;
     private int incorrectAnswers;
 
+
     @Override
     public String toString() {
         return "QuizSession{" +
